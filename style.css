@@ -1,0 +1,668 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Baloo Thambi 2', cursive;
+  box-sizing: border-box; /*elementele se muleaza in jurul border-ului*/
+  scroll-behavior: smooth;
+}
+/**/
+/*NAVIGATIE*/
+
+.nav-link{
+  font-size: 16px; /*dimensiune scris*/
+  margin: 3px; /*margine intre link-uri*/
+  font-weight: 900;/*cat de gros sa fie textul*/
+  color: #091C33;/*culoare text !important pt toate*/
+}
+.navbar-nav{
+  text-align: right;
+  margin-right: 20px;/*margine continut fata de dreapta*/
+}
+.menu-bar .navbar-toggler{
+  padding-right: 20px;
+  outline: none!important;
+  border: none!important
+}
+/*.navbar .fas{
+  font-size: 22px;
+}*/
+.navbar-brand img{ /*setari logo navigatie*/
+  width: 120px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.nav-link:hover{ /*pentru linie cand fac hover*/
+  font-weight: 900; /*cat de gros sa fie textul*/
+  border-bottom: 1px solid #091C33; /*linie de sub scris*/
+}
+@media only screen and (max-width: 1000px){ /*sa nu apara linia cand e mai mic ecranul de 1000px*/
+  .nav-link:hover{
+    border-bottom: none!important
+  }
+}
+/*NAVIGATIE SFARSIT*/
+img{
+  width: 100%;
+  max-width: 100%;
+}
+/*ACASA*/
+/*HEADER*/
+.header{ /*imaginea pentru header si un gradient care face culorile mai inchise*/
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),
+  url('1.jpg') center/cover no-repeat fixed;
+  margin-top: auto;
+}
+.header5{ /*imaginea pentru header si un gradient care face culorile mai inchise*/
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),
+  url('c.png') center/cover no-repeat fixed;
+  margin-top: auto;
+}
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centreaza textul si butonul*/
+  align-items: center;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover; /**/
+  width: 100%;
+  height: 100%;
+}
+.hero .title{
+  color: #ffffff;
+  font-size:6.5rem; /*rem is only relative to the html (root) font-size.*/
+  font-family: 'Satisfy', cursive;
+}
+.hero-button{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase; /*text scris cu majuscule*/
+  padding: 13px 20px;
+  border-radius: 200px; /*cat de rotund sa fie butonul*/
+  font-weight: bold;
+  background: #091C33; /*culoare buton*/
+  color: white; /*culoare text*/
+  cursor: pointer; /*cum sa arate cursorul pe buton*/
+  border: 2px solid #ffffff;
+  margin-top: 10px; /*distanta fata de textul de sus*/
+}
+.hero-button:hover{
+  background: #ffffff;
+  color: black;
+  border: 2px solid #091C33;
+  text-decoration: none; /*ca sa nu mai fie subliniat textul*/
+}
+.pulsate{ /*animatia pentru a pulsa butonul*/
+  animation: pulsate 3s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: .3;
+}
+@-webkit-keyframes pulsate{ /*pentru a functiona animatia la infinit*/
+  0%{
+    opacity: .3;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .3;
+  }
+}
+/*Capsuni*/
+.titlucapsuni{
+  font-family: 'Satisfy', cursive;
+  font-size: 4.5rem;
+  padding-top: 5px;
+  margin-left: 2px;
+}
+.textcapsuni{
+  font-family:serif;
+  font-size: 2.4rem;
+  margin-left: 2px;
+}
+/*Meniu*/
+.menu-image{
+  min-height: 80vh; /*marime imagine*/
+  background: url(6.jpeg)center/cover no-repeat fixed;
+}
+.menu-text{ /*setari pentru text*/
+  min-height: 80vh;
+  align-items: center;
+  background: rgb(57,63,117);
+  background: linear-gradient(0deg, rgba(57,63,117,1) 12%, rgba(142,88,138,1) 54%, rgba(221,122,145,1) 78%, rgba(252,219,159,1) 96%);
+  color: #ffffff;
+  padding: 90px 0px; /*patrat*/
+}
+.menu-text-center{
+  width: 90%; /*pe cat sa stea textul in dreptunghi*/
+  margin: 0 auto;
+}
+.menu-text h1{ /*setari "Meniu"*/
+  font-size: 80px;
+  /*text-transform: uppercase;*/
+  margin-bottom: 10px;
+  font-family: 'Satisfy', cursive;
+}
+.menu-text p{ /*setari paragraf*/
+  margin: 10px 0;
+  line-height: 2;
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px
+}
+.menu-text a{ /*setari buton*/
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 20px; /*cat de mare sa fie butonul*/
+  border-radius: 200px;
+  font-weight: bold;
+  background: #091C33;
+  color: white;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+
+}
+.menu-text a:hover{ /*setari buton hover*/
+  background: #ffffff;
+  color: black;
+  border: 2px solid #091C33;
+  text-decoration: none; /*ca sa nu mai fie subliniat textul*/
+}
+@media screen and (min-width:776px){
+  .menu{
+    display: flex;
+  }
+  .menu-text{
+    flex:0 0 26%;
+  }
+  .menu-image{ /*cat sa reprezinte imaginea fata de gradient dreptunhi*/
+    flex: 0 0 75%; /*patrat*/
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%)/*trunghi*/
+  }
+  .menu{  /* pentru culoare triunghi*/
+    background: rgb(57,63,117);
+    background: linear-gradient(0deg, rgba(57,63,117,1) 12%, rgba(142,88,138,1) 54%, rgba(221,122,145,1) 78%, rgba(252,219,159,1) 96%);
+  }
+}
+/*Iconite media*/
+#social-icons{
+  height: 150px;
+  background: #ffffff;
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+#social-icons a{
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0px 5px; /*distanta intre iconite*/
+  font-size: 40px;
+  border-radius: 5px;
+  transition: transform 2s ease, color 2s ease; /*tipul tranzitiei si timpul*/
+}
+#social-icons a:hover{
+  transform: translateY(-20px); /*animatia merge in sus*/
+}
+.facebook{ /*culoare iconita*/
+  color: #3b5998;
+}
+.instagram{
+  color: #e1306c;
+}
+.plus{
+  color: #db4a39;
+}
+.altt{
+  color: #d6282d;
+}
+/*CAZARE*/
+.header2{ /*imaginea pentru header si un gradient care face culorile mai inchise*/
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),
+  url('cazare.jpg') center/cover no-repeat fixed;
+  margin-top: auto;
+}
+.hero2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centreaza textul si butonul*/
+  align-items: center;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover; /**/
+  width: 100%;
+  height: 80%;
+}
+.hero2 .title{
+  color: #ffffff;
+  font-size:6.25rem; /*rem is only relative to the html (root) font-size.*/
+  font-family: 'Satisfy', cursive;
+}
+.hero2-button{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase; /*text scris cu majuscule*/
+  padding: 13px 20px;
+  border-radius: 200px; /*cat de rotund sa fie butonul*/
+  font-weight: bold;
+  background: #091C33; /*culoare buton*/
+  color: white; /*culoare text*/
+  cursor: pointer; /*cum sa arate cursorul pe buton*/
+  border: 2px solid #ffffff;
+  margin-top: 10px; /*distanta fata de textul de sus*/
+}
+.hero2-button:hover{
+  background: #ffffff;
+  color: black;
+  border: 2px solid #091C33;
+  text-decoration: none; /*ca sa nu mai fie subliniat textul*/
+}
+/* Cardurile*/
+#food{
+  padding: 20px;
+}
+.food-container{
+  max-width: 90vw;
+  margin: 0 auto; /*0 pentru sus-jos, auto pentru stanga-dreapta*/
+}
+.food-card{
+  position: relative;
+  background: rgb(57,63,117);
+  background: linear-gradient(0deg, rgba(57,63,117,1) 12%, rgba(142,88,138,1) 54%, rgba(221,122,145,1) 78%, rgba(252,219,159,1) 96%);
+  margin: 20px 0;
+  color: #ffffff; /*culoare scris*/
+  overflow: hidden; /*ce trece peste card este ascuns*/
+  padding: 4px;
+  border-radius: 16px; /*unghi forma pentru carduri*/
+  box-shadow: 2px 3px 1px 1px #393f75;
+}
+.title-text{
+    font-size: 40px;
+    text-align: center;
+    font-size:4.25rem; /*relative to the html (root) font-size.*/
+    font-family: 'Satisfy', cursive;
+}
+#food img{
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  transition: transform 4s;
+}
+.img-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*muta text in centru*/
+  text-align: center;
+  opacity: 0; /*textul nu se vede*/
+  transition: opacity 4s;
+}
+
+.img-text h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.food-card:hover img{
+  opacity: 0.4;
+  transform: scale(1.3); /*zoom imagine*/
+}
+.food-card:hover .img-text{
+  opacity: 1;
+}
+
+@media screen and (min-width: 576px) {
+  .food-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*2 coloane de 1fraction*/
+    grid-column-gap: 16px; /*distanta intre coloane*/
+  }
+}
+  
+@media screen and (min-width: 992px) {
+  .food-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/*3 coloane de 1fr*/
+    grid-column-gap: 16px;
+  }
+
+}
+/*Galerie*/
+#gallery{ /*cum arata toata galeria*/
+  padding: 40px;
+  background: #ffffff;
+}
+.gallery-item{ /*culoarea pentru tranzitie*/
+  background: rgb(57,63,117);
+  background: linear-gradient(0deg, rgba(57,63,117,1) 12%, rgba(142,88,138,1) 54%, rgba(221,122,145,1) 78%, rgba(252,219,159,1) 96%);
+  margin-top: 20px;
+}
+.gallery-item img{
+  display: block;
+  width: 100%;
+  opacity: 1; /*daca era 0 era totul gradient(nu se vedeau imaginile fara hover)*/
+  transition: opacity 2s ease;
+}
+.gallery-item img:hover{
+  opacity: 0.5; /*cat de puternica sa fie tranizitia(0 pentru maxim)*/
+}
+@media screen and (min-width: 576px) {
+  #gallery-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center{
+    grid-template-columns:repeat(4, 1fr); /*4 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 576px) {
+  .tz-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  .tz-gallery{
+    grid-template-columns:repeat(4, 1fr); /*4 coloade de 1fraction*/
+  }
+
+}
+/*FOOTER*/
+footer{
+  background:#091C33;
+  padding-top: 1.7%;
+  margin-top: 15px;
+  position: relative;
+}
+.text-center h4{
+  color: #ffffff;
+}
+footer a{ /*iconite*/
+  padding: 0.3em 0.7em;
+  color: #ffffff;
+  transition: all .5s ease;
+}
+footer p{ /*numar telefon*/
+  color: #ffffff;
+  font-size: 20px;
+}
+footer .top a{  /*sageata*/
+  position: absolute;
+  right: 2%;
+  top: 58%;
+  color: #ffffff;
+  font-size: 20px;
+}
+/*MENIU*/
+.w3-container h2{
+  font-family: 'Satisfy', cursive;
+  font-size:3.25rem;
+  padding-bottom: 20px;
+}
+.header3{ /*imaginea pentru header si un gradient care face culorile mai inchise*/
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),
+  url('toast.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: auto;
+ position: relative;
+}
+.hero3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centreaza textul si butonul*/
+  align-items: center;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover; /**/
+  width: 100%;
+  height: 100%;
+}
+.hero3 .title{
+  color: #ffffff;
+  font-size:5.9rem; /*rem is only relative to the html (root) font-size.*/
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.gallery-item2{ /*culoarea pentru tranzitie*/
+
+  background: #ffffff;
+  margin-top: 20px;
+  margin-left: 30px;
+  border: 1px solid #ccc;
+}
+
+@media screen and (min-width: 576px) {
+  #gallery-center2{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center2{
+    grid-template-columns:repeat(2, 0.5fr); /*2 coloade de 0.5fraction*/
+  }
+
+}
+@media screen and (min-width: 576px) {
+  #gallery-center3{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center3{
+    grid-template-columns:repeat(2, 0.5fr); /*4 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 576px) {
+  #gallery-center4{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center4{
+    grid-template-columns:repeat(2, 0.5fr); /*4 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 576px) {
+  #gallery-center5{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center5{
+    grid-template-columns:repeat(4, 1fr); /*4 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 576px) {
+  #gallery-center6{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 coloade de 1fraction*/
+  }
+
+}
+@media screen and (min-width: 992px) {
+  #gallery-center6{
+    grid-template-columns:repeat(2, 0.5fr); /*4 coloade de 1fraction*/
+  }
+}
+
+/*CAZARE*/
+.header4{ /*imaginea pentru header si un gradient care face culorile mai inchise*/
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)),
+  url('c.png') center/cover no-repeat fixed;
+  margin-top: auto;
+}
+.hero4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centreaza textul si butonul*/
+  align-items: center;
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover; /**/
+  width: 100%;
+  height: 100%;
+}
+.hero4 .title{
+  color: #ffffff;
+  font-size:6.5rem; /*rem is only relative to the html (root) font-size.*/
+  font-family: 'Satisfy', cursive;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.hero4-button{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase; /*text scris cu majuscule*/
+  padding: 13px 20px;
+  border-radius: 200px; /*cat de rotund sa fie butonul*/
+  font-weight: bold;
+  background: #091C33; /*culoare buton*/
+  color: white; /*culoare text*/
+  cursor: pointer; /*cum sa arate cursorul pe buton*/
+  border: 2px solid #ffffff;
+  margin-top: 10px; /*distanta fata de textul de sus*/
+}
+.hero4-button:hover{
+  background: #ffffff;
+  color: black;
+  border: 2px solid #091C33;
+  text-decoration: none; /*ca sa nu mai fie subliniat textul*/
+}
+.grid-container {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    width: 50%;
+    margin: -30rem auto;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding-top: 2rem;
+}
+
+/*DESPRE*/
+.textdespre{
+  font-family: 'Baloo Thambi 2', serif;
+  font-size: 1.2rem;
+  padding-top: 5px;
+  margin-left: 2px;
+  text-align: justify;
+}
+p{
+  font-family: 'Baloo Thambi 2', serif;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .container iframe{
+    display: grid;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+@media screen and (max-width: 992px) {
+  .textdespre{
+    font-family: 'Baloo Thambi 2', serif;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    margin-left: 2px;
+    text-align: justify;
+  }
+
+}
+/*Contact*/
+/* Create two columns that float next to eachother */
+.form-group {
+  margin-left: 70px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container button{
+  margin-left: 70px;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .form-group, button[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .form-group{
+    margin: auto;
+  }
+
+}
+@media screen and (max-width: 992px) {
+  .container button{
+    display: grid;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+/*A*/
+.cazare{
+  height: 100vh;
+}
+.cazare-header{
+  height: 100vh;
+  width: 100%;
+  background: url("c.png") no-repeat center;
+  background-size: cover;
+}
+.cazare-paragraf{
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.cazare-card{
+  background-color: #ffffff;
+  width: 80%;
+  margin: -30rem auto;
+  box-shadow: 0 1rem 3 rem rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding-bottom: 5rem;
+}
+.two-columns-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
